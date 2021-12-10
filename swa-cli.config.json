@@ -1,0 +1,10 @@
+{
+    "configurations": {
+      "app": {
+        "context": "www",
+        "appLocation": "www",
+        "apiLocation": "api",
+        "run": "npm run start"
+      }
+    }
+  }

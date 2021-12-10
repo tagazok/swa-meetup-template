@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile",
 		"args": {
 			// Options
-			"NODE_VERSION": "lts/*"
+			"NODE_VERSION": "14.7.0"
 		}
 	},
 	"forwardPorts": [ 7071, 4280 ],
@@ -16,6 +16,7 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"ms-vscode.azure-account",
 		"ms-azuretools.vscode-azurefunctions",
 		"ms-azuretools.vscode-azurestaticwebapps",
 		"ms-dotnettools.csharp",
@@ -26,7 +27,7 @@
 	],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "node --version",
+	"postCreateCommand": "cd api && npm install",
 
 	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
